@@ -32,7 +32,6 @@ const Form = ({ handleInputChange, handleAddNotes, formValues }) => {
         handleInputLength={handleInputLength}
       />
       <StatusInfo>Pozostało znaków: {inputLength}</StatusInfo>
-
       <FormField
         isTextArea
         label="Content"
@@ -44,7 +43,6 @@ const Form = ({ handleInputChange, handleAddNotes, formValues }) => {
         handleTextAreaLength={handleTextAreaLength}
       />
       <StatusInfo>Pozostało znaków: {textAreaLength}</StatusInfo>
-
       <Button type="submit">Add new</Button>
     </Wrapper>
   )

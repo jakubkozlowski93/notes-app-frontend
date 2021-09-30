@@ -40,13 +40,15 @@ const AppProviders = ({ children }) => {
 
   const handleAddNotes = (e) => {
     e.preventDefault()
-    const newUser = {
-      id: uuid(),
-      title: formValues.title,
-      content: formValues.content,
+    if (formValues.title && formValues.content) {
+      const newNote = {
+        id: uuid(),
+        title: formValues.title,
+        content: formValues.content,
+      }
+      setNotes([newNote, ...notes])
+      setFormValues(initialFormState)
     }
-    setNotes([newUser, ...notes])
-    setFormValues(initialFormState)
   }
 
   useEffect(() => {

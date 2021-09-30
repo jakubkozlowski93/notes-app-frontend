@@ -21,7 +21,7 @@ const SingleNote = ({ userData: { title, content }, deleteNote }) => {
 }
 
 SingleNote.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   content: PropTypes.string,
 }
 
