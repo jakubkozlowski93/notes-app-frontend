@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAuth } from 'providers/useAuth'
+import { useAuth } from 'hooks/useAuth'
 import { useForm } from 'react-hook-form'
 import { Wrapper, LoginWrapper } from './UnauthenticatedApp.styles'
 import FormField from 'components/molecules/FormField/FormField'

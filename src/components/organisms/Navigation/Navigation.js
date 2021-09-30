@@ -1,6 +1,6 @@
 import React from 'react'
 import { Title } from 'components/atoms/Title/Title'
-import { useAuth } from 'providers/useAuth'
+import { useAuth } from 'hooks/useAuth'
 import { Wrapper, ElemnentNav } from 'components/organisms/Navigation/Navigations.styles'
 
 const Navigation = () => {
