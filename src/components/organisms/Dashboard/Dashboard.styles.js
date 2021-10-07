@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  grid-row: 2/3;
 
   @media${device.tablet} {
     padding: 0px;

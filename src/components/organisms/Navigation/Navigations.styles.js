@@ -4,8 +4,8 @@ import { Title } from 'components/atoms/Title/Title'
 export const Wrapper = styled.div`
   background: red;
   width: 100%;
-  heigth: 100%;
   grid-row: 1/2;
+  grid-column: 1/3;
   background: ${({ theme }) => theme.colors.darkGrey};
   display: flex;
   align-items: center;
