@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 `
 
 export const NotesTitle = styled(Title)`
-  font-size: ${({ theme }) => theme.fontSize.l};
+  font-size: ${({ theme }) => theme.fontSize.m};
   padding: 10px 30px 0px 30px;
   margin: 5px 0;
 `
