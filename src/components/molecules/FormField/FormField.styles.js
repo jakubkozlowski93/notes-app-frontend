@@ -8,9 +8,9 @@ export const Wrapper = styled.div`
   align-items: flex-start;
   margin-top: 10px;
 
-  @media${device.desktop} {
+  /* @media${device.desktop} {
     margin: 10px 0;
-  }
+  } */
 
   ${Input} {
     margin: 12px 0;

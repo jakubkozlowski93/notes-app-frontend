@@ -1,8 +1,8 @@
 export const theme = {
   colors: {
     white: '#FFFFFF',
-    lightGrey: '#F7F8FA',
-    grey: '#C0C7D6',
+    lightGrey: '#eff1f5',
+    grey: '#f8f4f4',
     darkGrey: '#737C8E',
     success: '#8FCB89',
     darkPurple: '#C0C7D6',
