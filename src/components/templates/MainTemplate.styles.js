@@ -5,8 +5,8 @@ export const Wrapper = styled.div`
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: 70px 1fr;
-  grid-template-columns: 200px 1fr;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 250px 1fr;
   background-color: ${({ theme }) => theme.colors.lightGrey};
   height: 100vh;
   overflow-y: hidden;

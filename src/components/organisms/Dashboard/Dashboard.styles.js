@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { device } from 'asets/breakpoints'
 
 export const Wrapper = styled.div`
-  height: 90vh;
+  /* height: 80vh; */
   background: ${({ theme }) => theme.colors.lightPurple};
   display: flex;
   justify-content: space-around;

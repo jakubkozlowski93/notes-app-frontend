@@ -9,6 +9,7 @@ export const theme = {
     lightPurple: '#E5E5E5',
     black: '#000000',
     warning: '#ff6666',
+    graphite: '#2e353f',
   },
   fontSize: {
     xxl: '35px',
