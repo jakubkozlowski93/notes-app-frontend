@@ -8,5 +8,5 @@ export const Wrapper = styled.div`
   align-items: center;
   padding: 0px 30px;
   margin: 0;
-  border-right: 1px solid ${({ theme }) => theme.colors.graphite};
+  border-right: 10px solid ${({ theme }) => theme.colors.lightGrey};
 `

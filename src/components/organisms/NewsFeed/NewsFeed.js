@@ -23,16 +23,18 @@ const NewsFeed = () => {
   useEffect(() => {
     axios('https://inshortsapi.vercel.app/news?category=politics')
       .then(({ data }) => setNews(data.data))
-      .then((err) => console.err)
+      .then((err) => console.log(err))
   }, [])
 
   return (
     <Wrapper>
       <Title>News feed</Title>
 
-      {news.map(({ title, content, date, imageUrl }) => (
-        <SingleNews key={title} title={title} content={content} date={date} img={imageUrl} />
-      ))}
+      {news.length ? (
+        news.map(({ title, content, date, imageUrl }) => <SingleNews key={title} title={title} content={content} date={date} img={imageUrl} />)
+      ) : (
+        <p>Is loading...</p>
+      )}
     </Wrapper>
   )
 }

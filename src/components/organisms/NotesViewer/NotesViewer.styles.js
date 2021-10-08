@@ -8,12 +8,12 @@ export const Wrapper = styled.div`
   padding: 0 30px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+  /* box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2); */
   overflow-y: scroll;
   height: 80%;
 
   ::-webkit-scrollbar {
-    width: 5px;
+    display: none;
   }
 
   ::-webkit-scrollbar-track {
