@@ -5,12 +5,15 @@ import { AuthProvider } from 'hooks/useAuth'
 import { ErrorProvider } from 'hooks/useError'
 import NotesProviders from 'providers/NotesProviders'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { theme } from 'asets/styles/theme'
+import { lightTheme, darkTheme } from 'asets/styles/theme'
+import { useSelector } from 'react-redux'
 
 const AppProviders = ({ children }) => {
+  const theme = useSelector((state) => state)
+
   return (
     <Router>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme ? lightTheme : darkTheme}>
         <GlobalStyle />
         <ErrorProvider>
           <NotesProviders>
