@@ -10,8 +10,9 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.09);
-  justify-content: space-between;
+  justify-content: flex-end;
   /* border-bottom: 1px solid ${({ theme }) => theme.colors.graphite}; */
+  color: red;
 
   ${Title} {
     color: ${({ theme }) => theme.colors.white};

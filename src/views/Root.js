@@ -8,6 +8,7 @@ import ErrorMessage from 'components/molecules/ErrorMessage/ErrorMessage'
 const Root = () => {
   const auth = useAuth()
   const { error } = useError()
+
   return (
     <>
       {error ? <ErrorMessage message={error} /> : null}

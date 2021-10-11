@@ -43,7 +43,7 @@ const ContentWrapper = styled.div`
 
   img {
     margin-left: 30px;
-    width: 160px;
+    min-width: 160px;
     height: 140px;
   }
 `

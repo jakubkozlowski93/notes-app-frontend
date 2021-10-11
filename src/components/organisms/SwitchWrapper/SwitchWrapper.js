@@ -3,7 +3,7 @@ import { Wrapper } from 'components/organisms/SwitchWrapper/SwitchWrapper.styles
 import { Route, Switch } from 'react-router-dom'
 import Form from 'components/organisms/Form/Form'
 import NotesViewer from 'components/organisms/NotesViewer/NotesViewer'
-import { NotesContext } from 'providers/AppProviders'
+import { NotesContext } from 'providers/NotesProviders'
 
 const SwitchWrapper = () => {
   const { notes, handleAddNotes, formValues, handleInputChange } = useContext(NotesContext)
