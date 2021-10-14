@@ -6,11 +6,12 @@ export const Wrapper = styled.div`
   grid-row: 1/3;
   background: ${({ theme }) => theme.colors.graphite};
   color: ${({ theme }) => theme.colors.white};
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
+  /* box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2); */
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 2px;
+  box-shadow: 20px 0px 20px -7px rgb(160 44 219 / 7%);
 `
 
 export const LogoWrapper = styled.div`

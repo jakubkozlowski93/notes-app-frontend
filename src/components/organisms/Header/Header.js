@@ -1,52 +1,47 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Wrapper } from 'components/organisms/Header/Header.styles'
 import SwitchModeButton from 'components/atoms/SwitchModeButton/SwitchModeButton'
+import SearchBar from 'components/atoms/SearchBar/SearchBar'
+import { AuthContext } from 'hooks/useAuth'
 import styled from 'styled-components'
-import { SearchIcon } from 'components/atoms/Icons/Icons'
 
-const SearchWrapper = styled.div`
+const UserInfo = styled.div`
   display: flex;
-  height: 40px;
+  justify-content: center;
   align-items: center;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.lightPurple};
-  position: relative;
 
-  &:focus-within {
-    border-bottom: 1px solid ${({ theme }) => theme.colors.warning};
-    transition: 0.4s ease;
+  img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
 
-    &::before {
-      content: 'Search...';
-      position: absolute;
-      color: ${({ theme }) => theme.colors.darkGrey};
-      font-size: ${({ theme }) => theme.fontSize.s};
-      top: -7px;
-      left: 35px;
-      font-weight: 500;
-    }
+  h3 {
+    margin-left: 10px;
+    color: ${({ theme }) => theme.colors.darkGrey};
   }
 `
 
-const SearchInput = styled.input`
-  outline: none;
-  border: none;
-  color: ${({ theme }) => theme.colors.darkGrey};
-  font-weight: 500;
-  padding: 0px 0px 0px 5px;
-
-  &:focus::placeholder {
-    color: transparent;
-  }
+const DetailsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 190px;
 `
 
 const Header = () => {
+  const { login } = useContext(AuthContext)
+
   return (
     <Wrapper>
-      <SearchWrapper>
-        <SearchIcon />
-        <SearchInput type="text" placeholder="Search" id="search" autoComplete="off" onFocus />
-      </SearchWrapper>
-      <SwitchModeButton />
+      <SearchBar />
+      <DetailsWrapper>
+        <SwitchModeButton />
+        <UserInfo>
+          <img alt="sss" src="https://aadimcollege.edu.np/wp-content/uploads/2020/08/default.jpg" />
+          <h3>{login}</h3>
+        </UserInfo>
+      </DetailsWrapper>
     </Wrapper>
   )
 }

@@ -2,10 +2,11 @@ import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { useError } from 'hooks/useError'
 
-const AuthContext = React.createContext({})
+export const AuthContext = React.createContext({})
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
+  const [login, setLogin] = useState(null)
   const { dispatchError } = useError()
 
   useEffect(() => {
@@ -13,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     if (token) {
       ;(async () => {
         try {
-          const response = await axios.get('https://notes-application-v1.herokuapp.com/api/main', {
+          const response = await axios.get('http://localhost:8080/api/main', {
             headers: {
               authorization: `Bearer ${token}`,
             },
@@ -28,13 +29,15 @@ export const AuthProvider = ({ children }) => {
 
   const signIn = async ({ login, password }) => {
     try {
-      const response = await axios.post('https://notes-application-v1.herokuapp.com/api/login', {
+      const response = await axios.post('http://localhost:8080/api/login', {
         login,
         password,
       })
       setUser(response.data.token)
       localStorage.setItem('token', response.data.token)
+      setLogin(response.data.payload.login)
     } catch (err) {
+      console.log(err)
       dispatchError(`Invalid login or password`)
     }
   }
@@ -44,7 +47,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('token')
   }
 
-  return <AuthContext.Provider value={{ user, signIn, signOut }}>{children}</AuthContext.Provider>
+  return <AuthContext.Provider value={{ user, signIn, signOut, login }}>{children}</AuthContext.Provider>
 }
 
 export const useAuth = () => {
