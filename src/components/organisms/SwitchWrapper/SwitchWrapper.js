@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import Form from 'components/organisms/Form/Form'
 import NotesViewer from 'components/organisms/NotesViewer/NotesViewer'
 import { NotesContext } from 'providers/NotesProviders'
+import NewsFeed from 'components/organisms/NewsFeed/NewsFeed'
 
 const SwitchWrapper = () => {
   const { notes, handleAddNotes, formValues, handleInputChange } = useContext(NotesContext)
@@ -16,6 +17,9 @@ const SwitchWrapper = () => {
         </Route>
         <Route path="/viewer">
           <NotesViewer data={notes} />
+        </Route>
+        <Route path="/news">
+          <NewsFeed />
         </Route>
       </Switch>
     </Wrapper>

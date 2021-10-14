@@ -5,12 +5,8 @@ import { Title } from 'components/atoms/Title/Title'
 import axios from 'axios'
 
 const Wrapper = styled.div`
-  grid-column: 3/4;
-  grid-row: 2/3;
-  height: 80%;
-  margin: 40px;
-  background: ${({ theme }) => theme.colors.ligthPurple};
   overflow-y: scroll;
+  background: ${({ theme }) => theme.body.bodyColor};
 
   ::-webkit-scrollbar {
     display: none;

@@ -4,11 +4,11 @@ export const Wrapper = styled.div`
   display: flex;
   height: 40px;
   align-items: center;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.lightPurple};
+  border-bottom: 1px solid ${({ theme }) => theme.header.searchWrapperColor};
   position: relative;
 
   &:focus-within {
-    border-bottom: 1px solid ${({ theme }) => theme.colors.warning};
+    border-bottom: 1px solid ${({ theme }) => theme.header.searchWrapperColorFocus};
     transition: 0.4s ease;
 
     &::before {
@@ -29,6 +29,7 @@ export const SearchInput = styled.input`
   color: ${({ theme }) => theme.colors.darkGrey};
   font-weight: 500;
   padding: 0px 0px 0px 5px;
+  background: inherit;
 
   &:focus::placeholder {
     color: transparent;

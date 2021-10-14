@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
 import { useAuth } from 'hooks/useAuth'
 import { Title } from 'components/atoms/Title/Title'
-import { DashboardIcon, NotesIcon, AddNoteIcon, FAQIcon, LogoutIcon } from 'components/atoms/Icons/Icons'
-import { Wrapper, NavigationWrapper, LogoWrapper, StyledLink, LogoutWrapper } from 'components/organisms/Sidebar/Sidebrar.styles'
+import { DashboardIcon, NotesIcon, AddNoteIcon, FAQIcon, News } from 'components/atoms/Icons/Icons'
+import { Wrapper, NavigationWrapper, LogoWrapper, StyledLink, SwitchModeWrapper } from 'components/organisms/Sidebar/Sidebrar.styles'
 import { Logo } from 'components/atoms/Icons/Icons'
 import { NotesContext } from 'providers/NotesProviders'
+import SearchBar from 'components/atoms/SearchBar/SearchBar'
+import SwitchModeButton from 'components/atoms/SwitchModeButton/SwitchModeButton'
 
 const Sidebar = () => {
   const auth = useAuth()
@@ -34,16 +36,21 @@ const Sidebar = () => {
           Add new
         </StyledLink>
 
+        <StyledLink to="/news" activeClassName="selected">
+          <News />
+          News Feed
+        </StyledLink>
+
         <StyledLink to="/faq" activeClassName="selected">
           <FAQIcon />
           FAQ
         </StyledLink>
       </NavigationWrapper>
 
-      <LogoutWrapper onClick={auth.signOut}>
-        <LogoutIcon />
-        Logout
-      </LogoutWrapper>
+      <SwitchModeWrapper>
+        Switch mode
+        <SwitchModeButton />
+      </SwitchModeWrapper>
     </Wrapper>
   )
 }

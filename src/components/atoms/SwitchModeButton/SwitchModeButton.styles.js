@@ -19,9 +19,10 @@ export const StyledLabel = styled.label`
   justify-content: space-between;
   width: 60px;
   height: 30px;
-  background: ${({ theme }) => theme.colors.graphite};
+  background: ${({ theme }) => theme.header.switchColor};
   border-radius: 20px;
   padding: 0px 5px;
+  margin-left: 10px;
 `
 
 export const StyledSpan = styled.span`

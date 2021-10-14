@@ -20,6 +20,25 @@ export const lightTheme = {
     m: '14px',
     s: '12px',
   },
+  sidebar: {
+    textColor: '#FFFFFF',
+    activeHoverColor: '#04619f',
+    backgroundColor: '#2e353f',
+    successColor: '#8FCB89',
+    warningColor: '#ff6666',
+    titleColor: '#737C8E',
+  },
+  header: {
+    borderBottom: '#E5E5E5',
+    background: '#FFFFFF',
+    gradient: 'linear-gradient(#091236, #1E215D)',
+    switchColor: '#737C8E',
+    searchWrapperColor: '#737C8E',
+    searchWrapperColorFocus: '#ff6666',
+  },
+  body: {
+    bodyColor: '#ffffff',
+  },
 }
 
 // export const lightTheme = {
@@ -49,7 +68,22 @@ export const darkTheme = {
     m: '14px',
     s: '12px',
   },
-  backgrounds: {
-    gradient: 'linear-gradient(#091236, #1E215D)',
+  sidebar: {
+    textColor: '#FFFFFF',
+    activeHoverColor: '#04619f',
+    backgroundColor: '#2e353f',
+    successColor: '#8FCB89',
+    warningColor: '#ff6666',
+    titleColor: '#737C8E',
+  },
+  header: {
+    borderBottom: '#21262d',
+    background: '#0d1117',
+    switchColor: '#04619f',
+    searchWrapperColor: '#04619f',
+    searchWrapperColorFocus: '#04619f',
+  },
+  body: {
+    bodyColor: '#24292E',
   },
 }
