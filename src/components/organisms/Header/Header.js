@@ -1,66 +1,52 @@
 import React from 'react'
 import { Wrapper } from 'components/organisms/Header/Header.styles'
-import { useDispatch } from 'react-redux'
+import SwitchModeButton from 'components/atoms/SwitchModeButton/SwitchModeButton'
 import styled from 'styled-components'
-import { FaSun, FaMoon } from 'react-icons/fa'
+import { SearchIcon } from 'components/atoms/Icons/Icons'
 
-const Sun = styled(FaSun)`
-  color: orange;
-  font-size: ${({ theme }) => theme.fontSize.l};
-`
-
-const Moon = styled(FaMoon)`
-  color: white;
-  font-size: ${({ theme }) => theme.fontSize.l};
-`
-
-const StyledLabel = styled.label`
-  cursor: pointer;
+const SearchWrapper = styled.div`
+  display: flex;
+  height: 40px;
+  align-items: center;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.lightPurple};
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 60px;
-  height: 30px;
-  background: ${({ theme }) => theme.colors.graphite};
-  border-radius: 20px;
-  padding: 0px 5px;
-`
 
-const StyledSpan = styled.span`
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background: ${({ theme }) => theme.colors.white};
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s ease;
+  &:focus-within {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.warning};
+    transition: 0.4s ease;
 
-  &::before {
+    &::before {
+      content: 'Search...';
+      position: absolute;
+      color: ${({ theme }) => theme.colors.darkGrey};
+      font-size: ${({ theme }) => theme.fontSize.s};
+      top: -7px;
+      left: 35px;
+      font-weight: 500;
+    }
   }
 `
 
-const StyledInput = styled.input`
-  display: none;
+const SearchInput = styled.input`
+  outline: none;
+  border: none;
+  color: ${({ theme }) => theme.colors.darkGrey};
+  font-weight: 500;
+  padding: 0px 0px 0px 5px;
 
-  &:checked + ${StyledSpan} {
-    transform: translateX(30px);
+  &:focus::placeholder {
+    color: transparent;
   }
 `
 
 const Header = () => {
-  const dispatch = useDispatch()
-
   return (
     <Wrapper>
-      <StyledLabel>
-        <StyledInput type="checkbox" onChange={() => dispatch({ type: 'TOGGLE' })} />
-        <StyledSpan></StyledSpan>
-        <Moon />
-        <Sun />
-      </StyledLabel>
+      <SearchWrapper>
+        <SearchIcon />
+        <SearchInput type="text" placeholder="Search" id="search" autoComplete="off" onFocus />
+      </SearchWrapper>
+      <SwitchModeButton />
     </Wrapper>
   )
 }
