@@ -5,7 +5,6 @@ import { DashboardIcon, NotesIcon, AddNoteIcon, FAQIcon, News } from 'components
 import { Wrapper, NavigationWrapper, LogoWrapper, StyledLink, SwitchModeWrapper } from 'components/organisms/Sidebar/Sidebrar.styles'
 import { Logo } from 'components/atoms/Icons/Icons'
 import { NotesContext } from 'providers/NotesProviders'
-import SearchBar from 'components/atoms/SearchBar/SearchBar'
 import SwitchModeButton from 'components/atoms/SwitchModeButton/SwitchModeButton'
 
 const Sidebar = () => {

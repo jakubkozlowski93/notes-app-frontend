@@ -24,8 +24,6 @@ const NewsFeed = () => {
 
   return (
     <Wrapper>
-      <Title>News feed</Title>
-
       {news.length ? (
         news.map(({ title, content, date, imageUrl }) => <SingleNews key={title} title={title} content={content} date={date} img={imageUrl} />)
       ) : (

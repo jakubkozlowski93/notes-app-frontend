@@ -3,13 +3,12 @@ import { Title } from 'components/atoms/Title/Title'
 import { StatusInfo } from 'components/atoms/StatusInfo/StatusInfo'
 
 export const Wrapper = styled.div`
-  /* background: ${({ theme }) => theme.colors.ligthPurple}; */
   border-radius: 15px;
   padding: 0 30px;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  height: 80%;
+  height: 100%;
 
   ::-webkit-scrollbar {
     display: none;

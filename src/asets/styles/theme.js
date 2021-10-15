@@ -39,6 +39,13 @@ export const lightTheme = {
   body: {
     bodyColor: '#ffffff',
   },
+  login: {
+    bodyColor: '#f5f5fd',
+    formColor: '#FFFFFF',
+    boxShadow: '0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2)',
+    textColor: '#ffffff',
+    title: '#737C8E',
+  },
 }
 
 // export const lightTheme = {
@@ -85,5 +92,12 @@ export const darkTheme = {
   },
   body: {
     bodyColor: '#24292E',
+  },
+  login: {
+    bodyColor: '#24292E',
+    formColor: '#363537',
+    boxShadow: '0px 7px 38px 6px rgba(36, 41, 46, 1)',
+    textColor: '#ffffff',
+    title: '#E5E5E5',
   },
 }

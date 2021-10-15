@@ -10,7 +10,6 @@ const NotesViewer = ({ data }) => {
 
   return (
     <Wrapper>
-      <Title>My notes</Title>
       {isLoading ? (
         <StatusInfo>Is loading...</StatusInfo>
       ) : (
