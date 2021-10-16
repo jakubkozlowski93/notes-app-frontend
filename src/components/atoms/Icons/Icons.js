@@ -4,6 +4,7 @@ import { FaServer, FaRegStickyNote, FaPen, FaQuestionCircle, FaSignOutAlt, FaDic
 import { AiOutlineMail } from 'react-icons/ai'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { BiWorld } from 'react-icons/bi'
+import { MdOutlineArrowDropDown, MdLogin } from 'react-icons/md'
 
 export const DashboardIcon = styled(FaServer)`
   font-size: ${({ theme }) => theme.fontSize.l};
@@ -67,4 +68,16 @@ export const Notifications = styled(IoMdNotificationsOutline)`
   color: ${({ theme }) => theme.header.searchInputColor};
   margin: 0px 10px;
   cursor: pointer;
+`
+
+export const ArrowDown = styled(MdOutlineArrowDropDown)`
+  cursor: pointer;
+  font-size: ${({ theme }) => theme.fontSize.xl};
+  color: darkGrey;
+`
+
+export const ArrowRight = styled(MdLogin)`
+  cursor: pointer;
+  font-size: ${({ theme }) => theme.fontSize.xl};
+  color: darkGrey;
 `
