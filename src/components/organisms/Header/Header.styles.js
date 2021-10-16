@@ -10,6 +10,5 @@ export const Wrapper = styled.div`
   box-shadow: 0 10px 20px -7px rgb(160 44 219 / 7%);
   border-bottom: 1px solid ${({ theme }) => theme.header.borderBottom};
   background: ${({ theme }) => theme.header.background};
-  /* background-image: ${({ theme }) => theme.header.gradient}; */
-  opacity: 0.9;
+  transition: 0.3s ease-in;
 `

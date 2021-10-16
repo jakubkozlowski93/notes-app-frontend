@@ -4,6 +4,7 @@ import { Title } from 'components/atoms/Title/Title'
 
 export const Wrapper = styled.div`
   grid-row: 1/3;
+  grid-column: 1/2;
   background: ${({ theme }) => theme.sidebar.backgroundColor};
   display: flex;
   flex-direction: column;

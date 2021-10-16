@@ -2,11 +2,17 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import SingleNews from 'components/molecules/SingleNews/SingleNews'
 import { Title } from 'components/atoms/Title/Title'
+import FirstNews from 'components/molecules/FirstNews/FirstNews'
+import AnotherNews from 'components/molecules/AnotherNews/AnotherNews'
 import axios from 'axios'
 
 const Wrapper = styled.div`
-  overflow-y: scroll;
-  background: ${({ theme }) => theme.body.bodyColor};
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  height: 90vh;
+  width: 100%;
 
   ::-webkit-scrollbar {
     display: none;
@@ -24,11 +30,16 @@ const NewsFeed = () => {
 
   return (
     <Wrapper>
-      {news.length ? (
+      {/* {news.length ? (
         news.map(({ title, content, date, imageUrl }) => <SingleNews key={title} title={title} content={content} date={date} img={imageUrl} />)
       ) : (
         <p>Is loading...</p>
-      )}
+      )} */}
+      <FirstNews />
+      <AnotherNews />
+      <AnotherNews />
+      <AnotherNews />
+      <AnotherNews />
     </Wrapper>
   )
 }

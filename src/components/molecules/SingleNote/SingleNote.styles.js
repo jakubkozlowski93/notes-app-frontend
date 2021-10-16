@@ -1,15 +1,32 @@
 import styled from 'styled-components'
 import { Title } from 'components/atoms/Title/Title'
-import { Button } from 'components/atoms/Button/Button'
+import { DeleteButton } from 'components/atoms/DeleteButton/DeleteButton'
 
 export const Wrapper = styled.div`
-  background: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.notes.bodyColor};
   border-radius: 15px;
   width: 100%;
-  box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.09);
-  color: ${({ theme }) => theme.colors.darkGrey};
+  box-shadow: ${({ theme }) => theme.notes.boxShadow};
+  color: ${({ theme }) => theme.notes.textColor};
   padding: 0px 5px 0px px;
   margin-bottom: 20px;
+  transition: 0.3s ease-in;
+`
+
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 0;
+
+  ${DeleteButton} {
+    display: none;
+  }
+`
+
+export const TitleWprapper = styled.div`
+  display: flex;
+  align-items: center;
 `
 
 export const NotesTitle = styled(Title)`
@@ -18,11 +35,18 @@ export const NotesTitle = styled(Title)`
   margin: 5px 0;
 `
 
-export const TitleWprapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 30px;
+export const Category = styled.span`
+  color: #ffffff;
+  padding: 3px;
+  border-radius: 5px;
+  background: ${({ theme, value }) => {
+    if (value === 'Home') return 'green'
+    if (value === 'School') return 'red'
+    if (value === 'Work') return 'blue'
+    return theme.colors.grey
+  }};
+  font-size: ${({ theme }) => theme.fontSize.s};
+  font-weight: normal;
 `
 
 export const ContentWrapper = styled.div`
@@ -34,11 +58,4 @@ export const ContentWrapper = styled.div`
   margin-bottom: 10px;
   padding: 10px 30px;
   text-align: justify;
-
-  ${Button} {
-    padding: 5px 15px;
-    font-size: ${({ theme }) => theme.fontSize.s};
-    margin: 20px 0px 0px 0px;
-    font-weight: 500 bolder;
-  }
 `

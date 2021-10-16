@@ -31,7 +31,7 @@ export const LoginWrapper = styled.div`
 
   ${Button} {
     color: #f1f1f1;
-    background: ${({ theme }) => theme.colors.darkGrey};
+    background: ${({ theme }) => theme.login.buttonColor};
     font-size: ${({ theme }) => theme.fontSize.l};
     letter-spacing: 1px;
     width: 100%;

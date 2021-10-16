@@ -9,8 +9,8 @@ const StyledButton = styled.button`
   justify-content: center;
   align-items: 100%;
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.darkGrey};
   cursor: pointer;
+  color: inherit;
 `
 
 export const DeleteButton = (props) => <StyledButton {...props}>X</StyledButton>

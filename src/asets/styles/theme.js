@@ -33,11 +33,12 @@ export const lightTheme = {
     background: '#FFFFFF',
     gradient: 'linear-gradient(#091236, #1E215D)',
     switchColor: '#737C8E',
-    searchWrapperColor: '#737C8E',
-    searchWrapperColorFocus: '#ff6666',
+    searchBodyColor: '#ffffff',
+    searchBorderColor: '#C0C7D6',
+    searchInputColor: '#C0C7D6',
   },
   body: {
-    bodyColor: '#ffffff',
+    bodyColor: '#f5f5fd',
   },
   login: {
     bodyColor: '#f5f5fd',
@@ -45,6 +46,12 @@ export const lightTheme = {
     boxShadow: '0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2)',
     textColor: '#ffffff',
     title: '#737C8E',
+    buttonColor: '#737C8E',
+  },
+  notes: {
+    bodyColor: '#ffffff',
+    boxShadow: '0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2)',
+    textColor: '#737C8E',
   },
 }
 
@@ -85,10 +92,11 @@ export const darkTheme = {
   },
   header: {
     borderBottom: '#21262d',
-    background: '#0d1117',
+    background: '#363537',
     switchColor: '#04619f',
-    searchWrapperColor: '#04619f',
-    searchWrapperColorFocus: '#04619f',
+    searchBodyColor: '#24292E',
+    searchBorderColor: '#04619f',
+    searchInputColor: '#04619f',
   },
   body: {
     bodyColor: '#24292E',
@@ -99,5 +107,11 @@ export const darkTheme = {
     boxShadow: '0px 7px 38px 6px rgba(36, 41, 46, 1)',
     textColor: '#ffffff',
     title: '#E5E5E5',
+    buttonColor: '#04619f',
+  },
+  notes: {
+    bodyColor: '#363537',
+    boxShadow: '0px 7px 38px 6px rgba(36, 41, 46, 1)',
+    textColor: '#737C8E',
   },
 }

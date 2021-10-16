@@ -19,11 +19,6 @@ const Sidebar = () => {
       </LogoWrapper>
 
       <NavigationWrapper>
-        <StyledLink to="/dashboard" activeClassName="selected">
-          <DashboardIcon />
-          Dashboard
-        </StyledLink>
-
         <StyledLink to="/viewer" activeClassName="selected">
           <NotesIcon />
           My notes

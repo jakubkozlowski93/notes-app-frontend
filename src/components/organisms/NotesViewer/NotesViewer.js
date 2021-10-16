@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { Wrapper } from './NotesViewer.styles'
 import SingleNote from 'components/molecules/SingleNote/SingleNote'
 import { StatusInfo } from 'components/atoms/StatusInfo/StatusInfo'
-import { Title } from 'components/atoms/Title/Title'
 import { NotesContext } from 'providers/NotesProviders'
 
 const NotesViewer = ({ data }) => {

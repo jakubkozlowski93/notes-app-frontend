@@ -14,15 +14,6 @@ export const Wrapper = styled.div`
     display: none;
   }
 
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.colors.darkGrey};
-    border-radius: 10px;
-  }
-
   ${StatusInfo} {
     text-align: left;
     padding: 0px 15px;

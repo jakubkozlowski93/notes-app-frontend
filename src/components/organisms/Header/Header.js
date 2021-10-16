@@ -71,7 +71,7 @@ const NotificationsIconCounter = styled.span`
 `
 
 const Header = () => {
-  const { login } = useContext(AuthContext)
+  const { login, signOut } = useContext(AuthContext)
 
   return (
     <Wrapper>
@@ -87,6 +87,7 @@ const Header = () => {
           </NotificationsIconCounter>
           <img alt="sss" src="https://aadimcollege.edu.np/wp-content/uploads/2020/08/default.jpg" />
           <h3>{login}</h3>
+          <p onClick={() => signOut()}>Logout</p>
         </UserInfo>
       </DetailsWrapper>
     </Wrapper>

@@ -1,21 +1,20 @@
 import React from 'react'
-import { Wrapper, NotesTitle, ContentWrapper, TitleWprapper } from 'components/molecules/SingleNote/SingleNote.styles'
-import { Button } from 'components/atoms/Button/Button'
+import { Wrapper, NotesTitle, ContentWrapper, TitleWprapper, Header, Category } from 'components/molecules/SingleNote/SingleNote.styles'
 import PropTypes from 'prop-types'
 import { DeleteButton } from 'components/atoms/DeleteButton/DeleteButton'
 
-const SingleNote = ({ userData: { title, content }, deleteNote }) => {
+const SingleNote = ({ userData: { title, content, category }, deleteNote }) => {
   return (
     <Wrapper>
-      <TitleWprapper>
-        <NotesTitle>{title}</NotesTitle>
+      <Header>
+        <TitleWprapper>
+          <NotesTitle>{title}</NotesTitle>
+          <Category value={category}>{category}</Category>
+        </TitleWprapper>
         <DeleteButton onClick={() => deleteNote(title)} />
-      </TitleWprapper>
+      </Header>
 
-      <ContentWrapper>
-        {content}
-        <Button>Read more</Button>
-      </ContentWrapper>
+      <ContentWrapper>{content}</ContentWrapper>
     </Wrapper>
   )
 }
