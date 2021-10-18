@@ -60,7 +60,7 @@ const AnotherNews = () => {
     <Wrapper>
       <ImgWrapper>
         <figure>
-          <img alt="alt" src="https://source.unsplash.com/user/erondu/" />
+          {/* <img alt="alt" src="https://source.unsplash.com/user/erondu/" /> */}
           <figcaption>CATEGORY</figcaption>
         </figure>
       </ImgWrapper>

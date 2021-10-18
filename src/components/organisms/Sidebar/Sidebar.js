@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { Title } from 'components/atoms/Title/Title'
 import { NotesIcon, AddNoteIcon, FAQIcon, News } from 'components/atoms/Icons/Icons'
 import { Wrapper, NavigationWrapper, LogoWrapper, StyledLink, SwitchModeWrapper } from 'components/organisms/Sidebar/Sidebrar.styles'
@@ -8,10 +8,9 @@ import SwitchModeButton from 'components/atoms/SwitchModeButton/SwitchModeButton
 
 const Sidebar = () => {
   const { notes } = useContext(NotesContext)
-  const [isOpen, setIsOpen] = useState(true)
 
   return (
-    <Wrapper isOpen={isOpen}>
+    <Wrapper>
       <LogoWrapper>
         <Logo />
         <Title>notepad</Title>

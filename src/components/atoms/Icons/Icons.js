@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { FaServer, FaRegStickyNote, FaPen, FaQuestionCircle, FaSignOutAlt, FaDiceD20, FaSearch } from 'react-icons/fa'
+import { FaServer, FaRegStickyNote, FaPen, FaQuestionCircle, FaDiceD20, FaSearch } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { BiWorld } from 'react-icons/bi'
@@ -36,17 +36,11 @@ export const FAQIcon = styled(FaQuestionCircle)`
   margin: 0px 20px;
 `
 
-export const LogoutIcon = styled(FaSignOutAlt)`
-  font-size: ${({ theme }) => theme.fontSize.l};
-  display: block;
-  margin: 0px 20px;
-`
-
 export const Logo = styled(FaDiceD20)`
   font-size: ${({ theme }) => theme.fontSize.xxl};
   color: violet;
   display: block;
-  margin: 0px 15px;
+  margin: 0px 15px 0 40px;
 `
 export const SearchIcon = styled(FaSearch)`
   font-size: ${({ theme }) => theme.fontSize.l};

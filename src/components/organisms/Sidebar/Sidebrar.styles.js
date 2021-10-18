@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   grid-row: 1/3;
   grid-column: 1/2;
   border-radius: 2px;
-  box-shadow: 20px 0px 20px -7px rgb(160 44 219 / 7%);
   display: flex;
   flex-direction: column;
   align-items: center;

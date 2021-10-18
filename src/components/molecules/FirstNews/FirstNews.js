@@ -111,7 +111,7 @@ const FirstNews = () => {
     <Wrapper>
       <ImgWrapper>
         <figure>
-          <img alt="alt" src="https://source.unsplash.com/user/erondu/" />
+          {/* <img alt="alt" src="https://source.unsplash.com/user/erondu/" /> */}
           <figcaption>CATEGORY</figcaption>
         </figure>
       </ImgWrapper>
@@ -119,10 +119,10 @@ const FirstNews = () => {
         <SpanWrapper>
           <span className="breaking">BREAKING</span>
           <span className="category">POLITICS</span>
-          {/* <span className="more"> Read more</span> */}
         </SpanWrapper>
-        <TitleNews>Na plan przychodził "pod wpływem". Gdy umarł, jego ukochana wyskoczyła z okna</TitleNews>
-        {/* <Button>Read more</Button> */}
+        <TitleNews>
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.{' '}
+        </TitleNews>
       </ContentWrapper>
     </Wrapper>
   )

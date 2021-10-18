@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import SingleNews from 'components/molecules/SingleNews/SingleNews'
-import { Title } from 'components/atoms/Title/Title'
 import FirstNews from 'components/molecules/FirstNews/FirstNews'
 import AnotherNews from 'components/molecules/AnotherNews/AnotherNews'
 import axios from 'axios'
@@ -20,12 +18,12 @@ const Wrapper = styled.div`
 `
 
 const NewsFeed = () => {
-  const [news, setNews] = useState([])
+  // const [news, setNews] = useState([])
 
   useEffect(() => {
     axios('https://inshortsapi.vercel.app/news?category=politics')
-      .then(({ data }) => setNews(data.data))
-      .then((err) => console.log(err))
+    // .then(({ data }) => setNews(data.data))
+    // .then((err) => console.log(err))
   }, [])
 
   return (
