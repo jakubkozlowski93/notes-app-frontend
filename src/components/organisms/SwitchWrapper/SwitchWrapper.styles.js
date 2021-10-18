@@ -11,4 +11,5 @@ export const Wrapper = styled.div`
   background: ${({ theme }) => theme.body.bodyColor};
   padding: 30px;
   transition: 0.3s ease-in;
+  overflow-y: hidden;
 `

@@ -107,6 +107,7 @@ export const WrapperList = styled.div`
   cursor: pointer;
   color: darkGrey;
   border-radius: 2px;
+  z-index: 999;
 
   ${UserLogin}:hover & {
     visibility: visible;
