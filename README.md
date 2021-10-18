@@ -1,7 +1,7 @@
 ## Hello! 👋
 
 This is the application, where you can add and remove notes and reading news from the world by rest API.
-FRONTEND
+<br>[FRONTEND]
 
 ## Follow me
 
