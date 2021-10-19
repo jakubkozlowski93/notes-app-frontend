@@ -53,6 +53,9 @@ export const lightTheme = {
     boxShadow: '0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2)',
     textColor: '#737C8E',
   },
+  loader: {
+    color: '#2e353f',
+  },
 }
 
 // export const lightTheme = {
@@ -113,5 +116,8 @@ export const darkTheme = {
     bodyColor: '#363537',
     boxShadow: '0px 7px 38px 6px rgba(36, 41, 46, 1)',
     textColor: '#737C8E',
+  },
+  loader: {
+    color: '#E5E5E5',
   },
 }

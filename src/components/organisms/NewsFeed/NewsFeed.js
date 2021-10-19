@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import SingleNews from 'components/molecules/SingleNews/SingleNews'
+import { Loader } from 'components/atoms/Loader/Loader'
 import axios from 'axios'
 
 const Wrapper = styled.div`
@@ -26,10 +27,14 @@ const NewsFeed = () => {
       .then((err) => console.log(err))
   }, [])
 
-  return (
+  return news.length ? (
     <Wrapper>
-      {news.length ? news.map(({ title, url, imageUrl }) => <SingleNews key={title} title={title} img={imageUrl} src={url} />) : <p>Is loading...</p>}
+      {news.map(({ title, url, imageUrl }) => (
+        <SingleNews key={title} title={title} img={imageUrl} src={url} />
+      ))}{' '}
     </Wrapper>
+  ) : (
+    <Loader />
   )
 }
 
