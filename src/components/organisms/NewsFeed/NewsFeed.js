@@ -31,7 +31,7 @@ const NewsFeed = () => {
     <Wrapper>
       {news.map(({ title, url, imageUrl }) => (
         <SingleNews key={title} title={title} img={imageUrl} src={url} />
-      ))}{' '}
+      ))}
     </Wrapper>
   ) : (
     <Loader />

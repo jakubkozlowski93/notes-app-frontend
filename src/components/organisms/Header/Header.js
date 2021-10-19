@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import {
   Wrapper,
   DetailsWrapper,
@@ -15,6 +15,7 @@ import { ArrowDown, ArrowRight } from 'components/atoms/Icons/Icons'
 
 const Header = () => {
   const auth = useContext(AuthContext)
+  const login = localStorage.getItem('login')
 
   return (
     <Wrapper>
@@ -31,7 +32,7 @@ const Header = () => {
         </UserInfo>
         <UserLogin>
           <img alt="sss" src="https://aadimcollege.edu.np/wp-content/uploads/2020/08/default.jpg" />
-          <h3>{auth.login}</h3>
+          <h3>{login}</h3>
           <ArrowDown />
           <WrapperList>
             <p onClick={auth.signOut}>Logout</p>

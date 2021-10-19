@@ -6,7 +6,6 @@ export const AuthContext = React.createContext({})
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
-  const [login, setLogin] = useState(null)
   const { dispatchError } = useError()
 
   useEffect(() => {
@@ -35,7 +34,7 @@ export const AuthProvider = ({ children }) => {
       })
       setUser(response.data.token)
       localStorage.setItem('token', response.data.token)
-      setLogin(response.data.payload.login)
+      localStorage.setItem('login', response.data.payload.login)
     } catch (err) {
       console.log(err)
       dispatchError(`Invalid login or password`)
@@ -44,10 +43,10 @@ export const AuthProvider = ({ children }) => {
 
   const signOut = () => {
     setUser(null)
-    localStorage.removeItem('token')
+    localStorage.removeItem('token', 'login')
   }
 
-  return <AuthContext.Provider value={{ user, signIn, signOut, login }}>{children}</AuthContext.Provider>
+  return <AuthContext.Provider value={{ user, signIn, signOut }}>{children}</AuthContext.Provider>
 }
 
 export const useAuth = () => {
