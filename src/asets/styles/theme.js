@@ -56,6 +56,11 @@ export const lightTheme = {
   loader: {
     color: '#2e353f',
   },
+  news: {
+    background: '#ffffff',
+    boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+    textColor: '#2e353f',
+  },
 }
 
 // export const lightTheme = {
@@ -119,5 +124,10 @@ export const darkTheme = {
   },
   loader: {
     color: '#E5E5E5',
+  },
+  news: {
+    background: '#363537',
+    boxShadow: '0px 7px 38px 6px rgba(36, 41, 46, 1)',
+    textColor: '#E5E5E5',
   },
 }

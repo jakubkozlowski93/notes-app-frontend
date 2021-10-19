@@ -5,7 +5,9 @@ export const Wrapper = styled.div`
   display: grid;
   grid-template-rows: 60% 1fr;
   padding: 5px;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: ${({ theme }) => theme.news.boxShadow};
+  background: ${({ theme }) => theme.news.background};
+  transition: 0.3s ease-in;
 `
 
 export const ImgWrapper = styled.div`
@@ -13,17 +15,17 @@ export const ImgWrapper = styled.div`
   text-align: center;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 
   img {
     min-width: 160px;
     width: 100%;
     height: 140px;
     object-fit: cover;
-    transition: all 0.6s ease;
-    position: re;
+    transition: all 0.9s ease;
 
     &:hover {
-      filter: blur(1px);
+      transform: scale(1.2);
     }
   }
 `
@@ -38,7 +40,7 @@ export const ContentWrapper = styled.div`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.graphite};
+    color: ${({ theme }) => theme.news.textColor};
     font-size: ${({ theme }) => theme.fontSize.m};
   }
 `
