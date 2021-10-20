@@ -47,6 +47,7 @@ export const lightTheme = {
     textColor: '#ffffff',
     title: '#737C8E',
     buttonColor: '#737C8E',
+    switchModeTextColor: '#737C8E',
   },
   notes: {
     bodyColor: '#ffffff',
@@ -116,6 +117,7 @@ export const darkTheme = {
     textColor: '#ffffff',
     title: '#E5E5E5',
     buttonColor: '#04619f',
+    switchModeTextColor: '#ffffff',
   },
   notes: {
     bodyColor: '#363537',

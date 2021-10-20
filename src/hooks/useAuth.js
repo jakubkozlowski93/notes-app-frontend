@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { useError } from 'hooks/useError'
-import { Redirect } from 'react-router-dom'
 
 export const AuthContext = React.createContext({})
 

@@ -40,7 +40,6 @@ export const Logo = styled(FaDiceD20)`
   font-size: ${({ theme }) => theme.fontSize.xxl};
   color: violet;
   display: block;
-  margin: 0px 15px 0 40px;
 `
 export const SearchIcon = styled(FaSearch)`
   font-size: ${({ theme }) => theme.fontSize.l};
