@@ -37,6 +37,7 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem('login', response.data.payload.login)
     } catch (err) {
       console.log(err)
+      alert(err)
       dispatchError(`Invalid login or password`)
     }
   }
