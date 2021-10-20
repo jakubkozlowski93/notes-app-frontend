@@ -35,9 +35,7 @@ const Header = () => {
           <h3>{login}</h3>
           <ArrowDown />
           <WrapperList>
-            <a href="/">
-              <p onClick={auth.signOut}>Logout</p>
-            </a>
+            <p onClick={auth.signOut}>Logout</p>
             <ArrowRight />
           </WrapperList>
         </UserLogin>

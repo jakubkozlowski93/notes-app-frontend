@@ -109,11 +109,6 @@ export const WrapperList = styled.div`
   border-radius: 2px;
   z-index: 999;
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
   ${UserLogin}:hover & {
     visibility: visible;
   }
