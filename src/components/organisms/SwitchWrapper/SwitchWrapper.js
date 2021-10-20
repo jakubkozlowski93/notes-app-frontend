@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Wrapper } from 'components/organisms/SwitchWrapper/SwitchWrapper.styles'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import Form from 'components/organisms/Form/Form'
 import NotesViewer from 'components/organisms/NotesViewer/NotesViewer'
 import { NotesContext } from 'providers/NotesProviders'
@@ -12,6 +12,9 @@ const SwitchWrapper = () => {
   return (
     <Wrapper>
       <Switch>
+        <Route exact path="/">
+          <Redirect to="/viewer" />
+        </Route>
         <Route path="/form">
           <Form handleAddNotes={handleAddNotes} formValues={formValues} handleInputChange={handleInputChange} />
         </Route>

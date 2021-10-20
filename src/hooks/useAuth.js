@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
 import { useError } from 'hooks/useError'
+import { Redirect } from 'react-router-dom'
 
 export const AuthContext = React.createContext({})
 
@@ -36,7 +37,6 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem('token', response.data.token)
       localStorage.setItem('login', response.data.payload.login)
     } catch (err) {
-      console.log(err)
       dispatchError(`Invalid login or password`)
     }
   }
