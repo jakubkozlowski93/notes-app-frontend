@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
     if (token) {
       ;(async () => {
         try {
-          const response = await axios.get('https://notes-application-v1.herokuapp.com/main', {
+          const response = await axios.get('http://192.168.0.115:8080/api/main', {
             headers: {
               authorization: `Bearer ${token}`,
             },
@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
 
   const signIn = async ({ login, password }) => {
     try {
-      const response = await axios.post('https://notes-application-v1.herokuapp.com/login', {
+      const response = await axios.post('http://192.168.0.115:8080/api/login', {
         login,
         password,
       })
@@ -37,7 +37,6 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem('login', response.data.payload.login)
     } catch (err) {
       console.log(err)
-      alert(err)
       dispatchError(`Invalid login or password`)
     }
   }

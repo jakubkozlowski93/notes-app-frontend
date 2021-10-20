@@ -33,12 +33,9 @@ const UnAuthenticatedApp = () => {
         </TitleWrapper>
         <FormField required type="text" id="login" name="login" label="Login" {...register('login')} />
         <FormField required type="password" id="password" name="password" label="Password" {...register('password')} />
+
         <Button type="submit">Sign in</Button>
       </LoginWrapper>
-      <SwitchModeWrapper>
-        Switch Mode
-        <SwitchModeButton />
-      </SwitchModeWrapper>
     </Wrapper>
   )
 }
