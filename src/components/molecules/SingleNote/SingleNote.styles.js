@@ -4,11 +4,10 @@ import { DeleteButton } from 'components/atoms/DeleteButton/DeleteButton'
 
 export const Wrapper = styled.div`
   background: ${({ theme }) => theme.notes.bodyColor};
-  border-radius: 15px;
   width: 100%;
   box-shadow: ${({ theme }) => theme.notes.boxShadow};
   color: ${({ theme }) => theme.notes.textColor};
-  padding: 0px 5px 0px px;
+  padding: 0px 5px 0px 0px;
   margin-bottom: 20px;
   transition: 0.3s ease-in;
 `
@@ -30,14 +29,15 @@ export const TitleWprapper = styled.div`
 `
 
 export const NotesTitle = styled(Title)`
-  font-size: ${({ theme }) => theme.fontSize.m};
   padding: 10px 30px 0px 30px;
   margin: 5px 0;
+  font-size: ${({ theme }) => theme.fontSize.m};
 `
 
 export const Category = styled.span`
   color: #ffffff;
   padding: 3px;
+  margin-right: 10px;
   border-radius: 5px;
   background: ${({ theme, value }) => {
     if (value === 'Home') return 'green'

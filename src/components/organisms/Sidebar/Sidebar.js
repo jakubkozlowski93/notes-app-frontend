@@ -1,19 +1,35 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Title } from 'components/atoms/Title/Title'
-import { NotesIcon, AddNoteIcon, FAQIcon, News } from 'components/atoms/Icons/Icons'
-import { Wrapper, NavigationWrapper, LogoWrapper, StyledLink, SwitchModeWrapper } from 'components/organisms/Sidebar/Sidebrar.styles'
-import { Logo } from 'components/atoms/Icons/Icons'
+import { NotesIcon, AddNoteIcon, FAQIcon, News, HamburgerIcon, Close, Logo } from 'components/atoms/Icons/Icons'
+import {
+  Wrapper,
+  NavigationWrapper,
+  LogoWrapper,
+  StyledLink,
+  SwitchModeWrapper,
+  HamburgerWrapper,
+} from 'components/organisms/Sidebar/Sidebrar.styles'
 import { NotesContext } from 'providers/NotesProviders'
 import SwitchModeButton from 'components/atoms/SwitchModeButton/SwitchModeButton'
 
 const Sidebar = () => {
   const { notes } = useContext(NotesContext)
+  const [isOpen, setIsOpen] = useState(false)
+  const [isDark, setIsDark] = useState(false)
 
   return (
-    <Wrapper>
+    <Wrapper isOpen={isOpen} isDark={isDark}>
       <LogoWrapper>
         <Logo />
         <Title>notepad</Title>
+        <HamburgerWrapper
+          onClick={() => {
+            setIsOpen(!isOpen)
+            setIsDark(!isDark)
+          }}
+        >
+          {!isOpen ? <HamburgerIcon /> : <Close />}
+        </HamburgerWrapper>
       </LogoWrapper>
 
       <NavigationWrapper>

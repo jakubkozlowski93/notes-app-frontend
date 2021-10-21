@@ -3,8 +3,6 @@ import { Title } from 'components/atoms/Title/Title'
 import { StatusInfo } from 'components/atoms/StatusInfo/StatusInfo'
 
 export const Wrapper = styled.div`
-  border-radius: 15px;
-  padding: 0 30px;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
@@ -12,15 +10,5 @@ export const Wrapper = styled.div`
 
   ::-webkit-scrollbar {
     display: none;
-  }
-
-  ${StatusInfo} {
-    text-align: left;
-    padding: 0px 15px;
-    font-size: ${({ theme }) => theme.fontSize.l};
-  }
-
-  ${Title} {
-    font-size: ${({ theme }) => theme.fontSize.xl};
   }
 `

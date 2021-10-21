@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-
 import { FaServer, FaRegStickyNote, FaPen, FaQuestionCircle, FaDiceD20, FaSearch } from 'react-icons/fa'
-import { AiOutlineMail } from 'react-icons/ai'
+import { AiOutlineMail, AiOutlineClose } from 'react-icons/ai'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { BiWorld } from 'react-icons/bi'
 import { MdOutlineArrowDropDown, MdLogin } from 'react-icons/md'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 export const DashboardIcon = styled(FaServer)`
   font-size: ${({ theme }) => theme.fontSize.l};
@@ -73,4 +73,16 @@ export const ArrowRight = styled(MdLogin)`
   cursor: pointer;
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: darkGrey;
+`
+
+export const HamburgerIcon = styled(GiHamburgerMenu)`
+  cursor: pointer;
+  color: white;
+  font-size: ${({ theme }) => theme.fontSize.xl};
+`
+
+export const Close = styled(AiOutlineClose)`
+  cursor: pointer;
+  font-size: ${({ theme }) => theme.fontSize.xl};
+  color: white;
 `

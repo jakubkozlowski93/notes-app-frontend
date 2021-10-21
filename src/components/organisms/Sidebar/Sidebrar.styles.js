@@ -4,13 +4,17 @@ import { Title } from 'components/atoms/Title/Title'
 
 export const Wrapper = styled.div`
   background: ${({ theme }) => theme.sidebar.backgroundColor};
-  grid-row: 1/3;
-  grid-column: 1/2;
-  border-radius: 2px;
+  /* grid-row: 1/3;
+  grid-column: 1/2; */
+  width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(${({ isOpen }) => (isOpen ? '0' : '-100%')});
+  z-index: 999;
 `
 
 export const LogoWrapper = styled.div`
@@ -18,6 +22,8 @@ export const LogoWrapper = styled.div`
   height: 90px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
 
   ${Title} {
     padding: 0;
@@ -26,7 +32,24 @@ export const LogoWrapper = styled.div`
     text-transform: uppercase;
     color: ${({ theme }) => theme.sidebar.titleColor};
     letter-spacing: 1px;
+    margin-left: 10px;
   }
+`
+
+export const HamburgerWrapper = styled.div`
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background: red;
+  top: 0;
+  right: -60px;
+  background: ${({ theme }) => theme.sidebar.backgroundColor};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  border-bottom-right-radius: 5px;
 `
 
 export const NavigationWrapper = styled.div`

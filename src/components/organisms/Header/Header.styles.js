@@ -2,9 +2,9 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   grid-row: 1/2;
-  grid-column: 2/3;
+  /* grid-column: 2/3; */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 0px 30px;
   box-shadow: 0 10px 20px -7px rgb(160 44 219 / 7%);
@@ -17,7 +17,6 @@ export const DetailsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 400px;
   height: 100%;
 `
 
@@ -83,7 +82,7 @@ export const UserLogin = styled.div`
     height: 35px;
     border-radius: 50%;
     cursor: pointer;
-    margin: 0 10px 0 30px;
+    margin: 0 10px 0 20px;
   }
 
   h3 {
