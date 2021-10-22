@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import { device } from 'asets/breakpoints'
 
 export const Wrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.header.searchBorderColor};
   padding: 0 5px;
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 30px;
   border-radius: 20px;
   background: ${({ theme }) => theme.header.searchBodyColor};
   transition: 0.3s ease-in;

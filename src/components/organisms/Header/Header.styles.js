@@ -1,8 +1,8 @@
 import styled from 'styled-components'
+import { device } from 'asets/breakpoints'
 
 export const Wrapper = styled.div`
   grid-row: 1/2;
-  /* grid-column: 2/3; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.header.borderBottom};
   background: ${({ theme }) => theme.header.background};
   transition: 0.3s ease-in;
+
+  @media ${device.medium} {
+    grid-column: 2/3;
+  }
 `
 
 export const DetailsWrapper = styled.div`

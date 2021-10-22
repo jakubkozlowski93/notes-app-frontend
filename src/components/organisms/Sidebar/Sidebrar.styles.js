@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import { Title } from 'components/atoms/Title/Title'
+import { device } from 'asets/breakpoints'
 
 export const Wrapper = styled.div`
   background: ${({ theme }) => theme.sidebar.backgroundColor};
-  /* grid-row: 1/3;
-  grid-column: 1/2; */
+
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -15,6 +15,13 @@ export const Wrapper = styled.div`
   transition: transform 0.3s ease-in-out;
   transform: translateX(${({ isOpen }) => (isOpen ? '0' : '-100%')});
   z-index: 999;
+
+  @media ${device.medium} {
+    position: static;
+    transform: none;
+    grid-row: 1/3;
+    grid-column: 1/2;
+  }
 `
 
 export const LogoWrapper = styled.div`
@@ -50,6 +57,10 @@ export const HamburgerWrapper = styled.div`
   cursor: pointer;
   transition: 0.5s ease-in-out;
   border-bottom-right-radius: 5px;
+
+  @media ${device.medium} {
+    display: none;
+  }
 `
 
 export const NavigationWrapper = styled.div`
