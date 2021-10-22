@@ -53,7 +53,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 100%;
+  /* height: 100%; */
   font-size: ${({ theme }) => theme.fontSize.m};
   margin-bottom: 10px;
   padding: 10px 30px;
