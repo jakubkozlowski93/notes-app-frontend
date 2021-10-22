@@ -15,6 +15,10 @@ export const Wrapper = styled.div`
   @media ${device.medium} {
     grid-column: 2/3;
   }
+
+  @media ${device.large} {
+    justify-content: space-between;
+  }
 `
 
 export const DetailsWrapper = styled.div`

@@ -48,11 +48,6 @@ const Sidebar = () => {
           <News />
           News Feed
         </StyledLink>
-
-        <StyledLink to="/faq" activeClassName="selected">
-          <FAQIcon />
-          FAQ
-        </StyledLink>
       </NavigationWrapper>
 
       <SwitchModeWrapper>

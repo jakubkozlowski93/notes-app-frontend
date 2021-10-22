@@ -4,13 +4,16 @@ import { device } from 'asets/breakpoints'
 export const Wrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.header.searchBorderColor};
   padding: 0 5px;
-  display: flex;
   align-items: center;
-  height: 30px;
+  height: 40px;
   border-radius: 20px;
   background: ${({ theme }) => theme.header.searchBodyColor};
   transition: 0.3s ease-in;
   display: none;
+
+  @media ${device.large} {
+    display: flex;
+  }
 `
 
 export const SearchInput = styled.input`
