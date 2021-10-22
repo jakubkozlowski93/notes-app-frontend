@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import FormField from 'components/molecules/FormField/FormField'
 import { Wrapper } from 'components/organisms/Form/Form.styles'
-import { Title } from 'components/atoms/Title/Title'
 import { Button } from 'components/atoms/Button/Button'
 import { StatusInfo } from 'components/atoms/StatusInfo/StatusInfo'
 
@@ -21,7 +20,6 @@ const Form = ({ handleInputChange, handleAddNotes, formValues }) => {
 
   return (
     <Wrapper as="form" onSubmit={handleAddNotes}>
-      <Title>Add notes</Title>
       <FormField
         label="Title"
         id="title"
@@ -43,6 +41,13 @@ const Form = ({ handleInputChange, handleAddNotes, formValues }) => {
         handleTextAreaLength={handleTextAreaLength}
       />
       <StatusInfo>Pozostało znaków: {textAreaLength}</StatusInfo>
+
+      {/* <select onSelect={() => console.log()}>
+        <option value="0">Select category:</option>
+        <option value="work">Work</option>
+        <option value="home">Home</option>
+        <option value="school">School</option>
+      </select> */}
       <Button type="submit">Add new</Button>
     </Wrapper>
   )

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { device } from 'asets/breakpoints'
 
 export const Input = styled.input`
   box-sizing: border-box;
@@ -8,13 +7,9 @@ export const Input = styled.input`
   color: ${({ theme }) => theme.colors.darkGrey};
   font-size: ${({ theme }) => theme.fontSize.l};
   resize: none;
-  border-radius: 15px;
+  border-radius: 5px;
   height: ${({ isTextArea }) => (isTextArea ? '200px' : null)};
-  width: ${({ isTextArea }) => (isTextArea ? '250px' : null)};
-
-  @media${device.desktop} {
-    width: 300px;
-  }
+  width: 100%;
 
   &:focus {
     outline: none;

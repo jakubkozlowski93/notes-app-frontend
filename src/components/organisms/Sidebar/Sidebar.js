@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Title } from 'components/atoms/Title/Title'
-import { NotesIcon, AddNoteIcon, FAQIcon, News, HamburgerIcon, Close, Logo } from 'components/atoms/Icons/Icons'
+import { NotesIcon, AddNoteIcon, News, HamburgerIcon, Close, Logo } from 'components/atoms/Icons/Icons'
 import {
   Wrapper,
   NavigationWrapper,

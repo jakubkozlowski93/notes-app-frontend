@@ -1,17 +1,25 @@
 import styled from 'styled-components'
-import { Title } from 'components/atoms/Title/Title'
+import { Button } from 'components/atoms/Button/Button'
+import { device } from 'asets/breakpoints'
 
 export const Wrapper = styled.div`
-  background: ${({ theme }) => theme.colors.ligthPurple};
-  border-radius: 15px;
-  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05), 0 15px 40px rgba(166, 173, 201, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 50px;
+  width: 100%;
+  height: 100%;
 
-  ${Title} {
-    font-size: ${({ theme }) => theme.fontSize.xl};
+  @media ${device.large} {
+    padding: 0 30px;
+  }
+
+  ${Button} {
+    width: 100%;
+    border-radius: 2px;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 `
