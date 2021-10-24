@@ -7,7 +7,7 @@ import { NotesContext } from 'providers/NotesProviders'
 import NewsFeed from 'components/organisms/NewsFeed/NewsFeed'
 
 const SwitchWrapper = () => {
-  const { notes, handleAddNotes, formValues, handleInputChange } = useContext(NotesContext)
+  const { notes, handleAddNotes, formValues, handleInputChange, initialFormState } = useContext(NotesContext)
 
   return (
     <Wrapper>
@@ -16,7 +16,7 @@ const SwitchWrapper = () => {
           <Redirect to="/viewer" />
         </Route>
         <Route path="/form">
-          <Form handleAddNotes={handleAddNotes} formValues={formValues} handleInputChange={handleInputChange} />
+          <Form handleAddNotes={handleAddNotes} formValues={formValues} handleInputChange={handleInputChange} initialFormState={initialFormState} />
         </Route>
         <Route path="/viewer">
           <NotesViewer data={notes} />

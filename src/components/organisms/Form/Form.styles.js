@@ -23,3 +23,19 @@ export const Wrapper = styled.div`
     }
   }
 `
+
+export const RadioWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px;
+
+  label {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  input {
+    cursor: pointer;
+  }
+`

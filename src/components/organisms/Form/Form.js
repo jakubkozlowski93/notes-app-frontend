@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import FormField from 'components/molecules/FormField/FormField'
-import { Wrapper } from 'components/organisms/Form/Form.styles'
+import { Wrapper, RadioWrapper } from 'components/organisms/Form/Form.styles'
 import { Button } from 'components/atoms/Button/Button'
 import { StatusInfo } from 'components/atoms/StatusInfo/StatusInfo'
 
@@ -41,13 +41,23 @@ const Form = ({ handleInputChange, handleAddNotes, formValues }) => {
         handleTextAreaLength={handleTextAreaLength}
       />
       <StatusInfo>Pozostało znaków: {textAreaLength}</StatusInfo>
+      <RadioWrapper>
+        <label htmlFor="r1">
+          <input id="r1" type="radio" name="radio" value="Home" onChange={handleInputChange} />
+          Home
+        </label>
 
-      {/* <select onSelect={() => console.log()}>
-        <option value="0">Select category:</option>
-        <option value="work">Work</option>
-        <option value="home">Home</option>
-        <option value="school">School</option>
-      </select> */}
+        <label htmlFor="r2">
+          <input id="r2" type="radio" name="radio" value="School" onChange={handleInputChange} />
+          School
+        </label>
+
+        <label htmlFor="r3">
+          <input id="r3" type="radio" name="radio" value="Work" onChange={handleInputChange} />
+          Work
+        </label>
+      </RadioWrapper>
+
       <Button type="submit">Add new</Button>
     </Wrapper>
   )

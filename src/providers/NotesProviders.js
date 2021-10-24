@@ -15,6 +15,7 @@ const initialFormState = {
   id: '',
   title: '',
   content: '',
+  radio: '',
 }
 
 const NotesProviders = ({ children }) => {
@@ -40,11 +41,12 @@ const NotesProviders = ({ children }) => {
 
   const handleAddNotes = (e) => {
     e.preventDefault()
-    if (formValues.title && formValues.content) {
+    if (formValues.title && formValues.content && formValues.radio) {
       const newNote = {
         id: uuid(),
         title: formValues.title,
         content: formValues.content,
+        category: formValues.radio,
       }
       setNotes([newNote, ...notes])
       setFormValues(initialFormState)

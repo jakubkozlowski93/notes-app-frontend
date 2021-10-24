@@ -5,4 +5,5 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  margin-bottom: 7px;
 `

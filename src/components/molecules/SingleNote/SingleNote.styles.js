@@ -32,6 +32,7 @@ export const NotesTitle = styled(Title)`
   padding: 10px 30px 0px 30px;
   margin: 5px 0;
   font-size: ${({ theme }) => theme.fontSize.m};
+  color: ${({ theme }) => theme.notes.textColor};
 `
 
 export const Category = styled.span`
