@@ -4,9 +4,9 @@ This is the application, where you can add and remove notes and reading news fro
 <br>[FRONTEND]
 <br>
 Look apllication on Netlify:
-<br>
-👉 https://notepad-application-v1.netlify.app/
-Login: Admin
+<br><br>
+👉 https://notepad-application-v1.netlify.app/<br>
+Login: Admin<br>
 Password: test123
 
 ## Follow me
