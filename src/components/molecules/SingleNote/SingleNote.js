@@ -22,6 +22,7 @@ const SingleNote = ({ userData: { title, content, category }, deleteNote }) => {
 SingleNote.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
+  category: PropTypes.string,
 }
 
 export default SingleNote
