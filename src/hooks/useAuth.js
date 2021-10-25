@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     if (token) {
       ;(async () => {
         try {
-          const response = await axios.get('http://192.168.0.115:8080/api/main', {
+          const response = await axios.get('https://notes-application-v1.herokuapp.com/api/main', {
             headers: {
               authorization: `Bearer ${token}`,
             },
@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
   const signIn = async ({ login, password }) => {
     try {
-      const response = await axios.post('http://192.168.0.115:8080/api/login', {
+      const response = await axios.post('https://notes-application-v1.herokuapp.com/api/login', {
         login,
         password,
       })
