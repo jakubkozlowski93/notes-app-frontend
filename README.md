@@ -2,6 +2,12 @@
 
 This is the application, where you can add and remove notes and reading news from the world by rest API.
 <br>[FRONTEND]
+<br>
+Look apllication on Netlify:
+<br>
+👉 https://notepad-application-v1.netlify.app/
+Login: Admin
+Password: test123
 
 ## Follow me
 
