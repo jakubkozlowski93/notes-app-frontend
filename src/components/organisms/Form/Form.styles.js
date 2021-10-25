@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   height: 100%;
 
   @media ${device.large} {
-    padding: 0 30px;
+    padding: 0 100px;
   }
 
   ${Button} {
