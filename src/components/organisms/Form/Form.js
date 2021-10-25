@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import FormField from 'components/molecules/FormField/FormField'
-import { Wrapper, RadioWrapper } from 'components/organisms/Form/Form.styles'
+import { Wrapper, RadioLabel, RadioWrapper } from 'components/organisms/Form/Form.styles'
 import { Button } from 'components/atoms/Button/Button'
 import { StatusInfo } from 'components/atoms/StatusInfo/StatusInfo'
+import { NotesContext } from 'providers/NotesProviders'
+import { Notification } from 'components/atoms/Notification/Notification'
 
 const Form = ({ handleInputChange, handleAddNotes, formValues }) => {
   const [inputLength, setInputLength] = useState(30)
   const [textAreaLength, setTextAreaLength] = useState(250)
+  const { message } = useContext(NotesContext)
 
   const handleInputLength = (e) => {
     let counter = e.target.value.length
@@ -21,7 +24,7 @@ const Form = ({ handleInputChange, handleAddNotes, formValues }) => {
   return (
     <Wrapper as="form" onSubmit={handleAddNotes}>
       <FormField
-        label="Title"
+        label="Title:"
         id="title"
         name="title"
         maxLength={30}
@@ -32,7 +35,7 @@ const Form = ({ handleInputChange, handleAddNotes, formValues }) => {
       <StatusInfo>Pozostało znaków: {inputLength}</StatusInfo>
       <FormField
         isTextArea
-        label="Content"
+        label="Content:"
         id="content"
         name="content"
         maxLength={300}
@@ -41,6 +44,7 @@ const Form = ({ handleInputChange, handleAddNotes, formValues }) => {
         handleTextAreaLength={handleTextAreaLength}
       />
       <StatusInfo>Pozostało znaków: {textAreaLength}</StatusInfo>
+      <RadioLabel>Category:</RadioLabel>
       <RadioWrapper>
         <label htmlFor="r1">
           <input id="r1" type="radio" name="radio" value="Home" onChange={handleInputChange} />
@@ -59,6 +63,7 @@ const Form = ({ handleInputChange, handleAddNotes, formValues }) => {
       </RadioWrapper>
 
       <Button type="submit">Add new</Button>
+      <Notification text={message} />
     </Wrapper>
   )
 }

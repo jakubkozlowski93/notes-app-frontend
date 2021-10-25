@@ -9,6 +9,7 @@ export const NotesContext = React.createContext({
   handleInputChange: () => {},
   handleAddNotes: () => {},
   handleDeleteNote: () => {},
+  message: String,
 })
 
 const initialFormState = {
@@ -31,6 +32,7 @@ const NotesProviders = ({ children }) => {
   const [notes, setNotes] = useState([])
   const [isLoading, setLoading] = useState(true)
   const [formValues, setFormValues] = useState([])
+  const [message, setMessage] = useState('')
 
   const handleInputChange = (e) => {
     setFormValues({
@@ -50,6 +52,15 @@ const NotesProviders = ({ children }) => {
       }
       setNotes([newNote, ...notes])
       setFormValues(initialFormState)
+      setMessage('Success. Your note has been added.')
+      setTimeout(() => {
+        setMessage('')
+      }, 2000)
+    } else {
+      setMessage('Title, content and catergory are required.')
+      setTimeout(() => {
+        setMessage('')
+      }, 2000)
     }
   }
 
@@ -74,6 +85,7 @@ const NotesProviders = ({ children }) => {
         handleInputChange,
         handleAddNotes,
         handleDeleteNote,
+        message,
       }}
     >
       {children}
