@@ -20,7 +20,6 @@ const Header = () => {
   return (
     <Wrapper>
       <SearchBar />
-
       <DetailsWrapper>
         <UserInfo>
           <MessageIconCounter>

@@ -4,7 +4,8 @@ export const Button = styled.button`
   background: ${({ theme }) => theme.colors.lightPurple};
   border: none;
   padding: 8px 20px;
-  border-radius: 20px;
+  border-radius: 5px;
+  width: 100%;
   color: ${({ theme }) => theme.colors.darkGrey};
   font-size: ${({ theme }) => theme.fontSize.m};
   font-weight: bold;

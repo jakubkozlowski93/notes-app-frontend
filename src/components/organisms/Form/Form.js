@@ -33,6 +33,7 @@ const Form = ({ handleInputChange, handleAddNotes, formValues }) => {
         handleInputLength={handleInputLength}
       />
       <StatusInfo>Pozostało znaków: {inputLength}</StatusInfo>
+
       <FormField
         isTextArea
         label="Content:"
@@ -44,7 +45,9 @@ const Form = ({ handleInputChange, handleAddNotes, formValues }) => {
         handleTextAreaLength={handleTextAreaLength}
       />
       <StatusInfo>Pozostało znaków: {textAreaLength}</StatusInfo>
+
       <RadioLabel>Category:</RadioLabel>
+
       <RadioWrapper>
         <label htmlFor="r1">
           <input id="r1" type="radio" name="radio" value="Home" onChange={handleInputChange} />

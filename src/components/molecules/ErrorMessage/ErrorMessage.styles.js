@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { DeleteButton } from 'components/atoms/DeleteButton/DeleteButton'
+import { device } from 'asets/breakpoints'
 
 export const Wrapper = styled.div`
   position: absolute;
@@ -15,6 +16,10 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   transform: translateX(20px);
+
+  @media ${device.large} {
+    width: 60%;
+  }
 `
 
 export const Icon = styled(DeleteButton)`
