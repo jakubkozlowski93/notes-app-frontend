@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
+    
   }
   
   *, *::after, *::before {
@@ -14,5 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     overflow-y: hidden;
+    scrollbar-width: none;
+
   }
 `

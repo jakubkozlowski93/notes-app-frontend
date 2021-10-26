@@ -1,7 +1,6 @@
 export const lightTheme = {
   colors: {
     white: '#FFFFFF',
-    lightGrey: '#f8f4f4',
     grey: '#f8f4f4',
     darkGrey: '#737C8E',
     success: '#8FCB89',
@@ -10,8 +9,6 @@ export const lightTheme = {
     black: '#000000',
     warning: '#ff6666',
     graphite: '#2e353f',
-    darkGraphite: '#24292E',
-    darkBlue: '#181c34',
   },
   fontSize: {
     xxl: '35px',
@@ -62,6 +59,9 @@ export const lightTheme = {
     boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
     textColor: '#2e353f',
   },
+  errorMessage: {
+    background: '#f8f4f4',
+  },
 }
 
 export const darkTheme = {
@@ -69,7 +69,7 @@ export const darkTheme = {
     white: '#FFFFFF',
     lightGrey: '#363537',
     grey: '#f8f4f4',
-    darkGrey: '#04619f',
+    darkGrey: '#737C8E',
     success: '#8FCB89',
     darkPurple: '#C0C7D6',
     lightPurple: '#E5E5E5',
@@ -124,5 +124,8 @@ export const darkTheme = {
     background: '#363537',
     boxShadow: '0px 7px 38px 6px rgba(36, 41, 46, 1)',
     textColor: '#E5E5E5',
+  },
+  errorMessage: {
+    background: '#363537',
   },
 }

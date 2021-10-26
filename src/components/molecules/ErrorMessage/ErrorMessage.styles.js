@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   padding: 10px 20px;
   border-radius: 12px;
-  background: ${({ theme }) => theme.colors.lightGrey};
+  background: ${({ theme }) => theme.errorMessage.background};
   border-left: 20px solid ${({ theme }) => theme.colors.warning};
   display: flex;
   align-items: center;
@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
 export const Icon = styled(DeleteButton)`
   width: 35px;
   height: 35px;
-  background: ${({ theme }) => theme.colors.lightGrey};
+  background: ${({ theme }) => theme.errorMessage.background};
   color: ${({ theme }) => theme.colors.warning};
   border: 2px solid ${({ theme }) => theme.colors.warning};
   font-size: ${({ theme }) => theme.fontSize.l};

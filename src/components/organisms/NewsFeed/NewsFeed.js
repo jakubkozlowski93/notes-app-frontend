@@ -10,7 +10,7 @@ const NewsFeed = () => {
   useEffect(() => {
     axios('https://inshortsapi.vercel.app/news?category=all')
       .then(({ data }) => setNews(data.data))
-      .then((err) => console.log(err))
+      .catch((err) => console.log(err))
   }, [])
 
   return news.length ? (
