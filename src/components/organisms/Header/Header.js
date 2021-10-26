@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Wrapper,
   DetailsWrapper,
@@ -7,6 +8,7 @@ import {
   NotificationsIconCounter,
   UserLogin,
   WrapperList,
+  StyledLink,
 } from 'components/organisms/Header/Header.styles'
 import SearchBar from 'components/atoms/SearchBar/SearchBar'
 import { AuthContext } from 'hooks/useAuth'
@@ -42,7 +44,10 @@ const Header = () => {
           <h3>{login}</h3>
           <ArrowDown />
           <WrapperList>
-            <p onClick={auth.signOut}>Logout</p>
+            <StyledLink to="/">
+              <p onClick={auth.signOut}>Logout</p>
+            </StyledLink>
+
             <ArrowRight />
           </WrapperList>
         </UserLogin>

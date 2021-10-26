@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { device } from 'asets/breakpoints'
+import { Link } from 'react-router-dom'
 
 export const Wrapper = styled.div`
   grid-row: 1/2;
@@ -77,7 +78,6 @@ export const WrapperList = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-weight: 500;
   cursor: pointer;
   color: darkGrey;
   border-radius: 2px;
@@ -87,4 +87,10 @@ export const WrapperList = styled.div`
   ${UserLogin}:hover & {
     visibility: visible;
   }
+`
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
 `
