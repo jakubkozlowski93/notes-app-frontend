@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {
   Wrapper,
   DetailsWrapper,
@@ -15,7 +15,15 @@ import { ArrowDown, ArrowRight } from 'components/atoms/Icons/Icons'
 
 const Header = () => {
   const auth = useContext(AuthContext)
-  const login = localStorage.getItem('login')
+  const [login, setLogin] = useState('')
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await localStorage.getItem('login')
+      setLogin(response)
+    }
+    fetchData()
+  }, [login])
 
   return (
     <Wrapper>
