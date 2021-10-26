@@ -40,43 +40,10 @@ export const UserInfo = styled.div`
 
 export const MessageIconCounter = styled.span`
   position: relative;
-
-  &::before {
-    position: absolute;
-    content: '3';
-    background: green;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    top: -10px;
-    right: -3px;
-    color: white;
-    font-size: ${({ theme }) => theme.fontSize.s};
-  }
 `
 
 export const NotificationsIconCounter = styled.span`
   position: relative;
-  &::before {
-    position: absolute;
-    content: '5';
-    background: fuchsia;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    top: -10px;
-    right: 3px;
-    color: white;
-    font-size: ${({ theme }) => theme.fontSize.s};
-  }
 `
 export const UserLogin = styled.div`
   display: flex;

@@ -6,7 +6,7 @@ const SearchBar = () => {
   return (
     <Wrapper>
       <SearchIcon />
-      <SearchInput type="text" placeholder="Search" id="search" autoComplete="off" onFocus />
+      <SearchInput type="text" placeholder="Search" id="search" autoComplete="off" />
     </Wrapper>
   )
 }

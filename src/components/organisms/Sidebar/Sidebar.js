@@ -15,17 +15,15 @@ import SwitchModeButton from 'components/atoms/SwitchModeButton/SwitchModeButton
 const Sidebar = () => {
   const { notes } = useContext(NotesContext)
   const [isOpen, setIsOpen] = useState(false)
-  const [isDark, setIsDark] = useState(false)
 
   return (
-    <Wrapper isOpen={isOpen} isDark={isDark}>
+    <Wrapper isOpen={isOpen}>
       <LogoWrapper>
         <Logo />
         <Title>notepad</Title>
         <HamburgerWrapper
           onClick={() => {
             setIsOpen(!isOpen)
-            setIsDark(!isDark)
           }}
         >
           {!isOpen ? <HamburgerIcon /> : <Close />}
