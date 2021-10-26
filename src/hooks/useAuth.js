@@ -44,10 +44,10 @@ export const AuthProvider = ({ children }) => {
   }
 
   const signOut = () => {
-    setUser(null)
     localStorage.removeItem('token')
-    setLoginName(null)
+    setUser(null)
     localStorage.removeItem('login')
+    setLoginName(null)
   }
 
   return <AuthContext.Provider value={{ user, signIn, signOut, loginName }}>{children}</AuthContext.Provider>

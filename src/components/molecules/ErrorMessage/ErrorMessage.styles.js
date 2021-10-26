@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { DeleteButton } from 'components/atoms/DeleteButton/DeleteButton'
+import { StyledButton } from 'components/atoms/DeleteButton/DeleteButton'
 import { device } from 'asets/breakpoints'
 
 export const Wrapper = styled.div`
@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
   }
 `
 
-export const Icon = styled(DeleteButton)`
+export const Icon = styled(StyledButton)`
   width: 35px;
   height: 35px;
   background: ${({ theme }) => theme.errorMessage.background};

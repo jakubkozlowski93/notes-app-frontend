@@ -1,7 +1,7 @@
 import React from 'react'
 import { Wrapper, NotesTitle, ContentWrapper, TitleWprapper, Header, Category } from 'components/molecules/SingleNote/SingleNote.styles'
 import PropTypes from 'prop-types'
-import { DeleteButton } from 'components/atoms/DeleteButton/DeleteButton'
+import DeleteButton from 'components/atoms/DeleteButton/DeleteButton'
 
 const SingleNote = ({ userData: { title, content, category }, deleteNote }) => {
   return (

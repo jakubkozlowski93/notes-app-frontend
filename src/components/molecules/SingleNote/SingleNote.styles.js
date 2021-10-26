@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Title } from 'components/atoms/Title/Title'
-import { DeleteButton } from 'components/atoms/DeleteButton/DeleteButton'
+import DeleteButton from 'components/atoms/DeleteButton/DeleteButton'
 
 export const Wrapper = styled.div`
   background: ${({ theme }) => theme.notes.bodyColor};
