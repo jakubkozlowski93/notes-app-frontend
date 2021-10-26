@@ -14,13 +14,12 @@ export const AuthProvider = ({ children }) => {
     if (token) {
       ;(async () => {
         try {
-          const response = await axios.get('https://notepad-application.herokuapp.com//api/main', {
+          const response = await axios.get('https://notepad-application.herokuapp.com/api/main', {
             headers: {
               authorization: `Bearer ${token}`,
             },
           })
           setUser(response.data)
-          console.log(response.data)
         } catch (e) {
           console.log(e)
         }
