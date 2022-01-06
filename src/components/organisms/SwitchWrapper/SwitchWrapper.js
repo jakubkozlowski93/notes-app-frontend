@@ -5,6 +5,7 @@ import Form from 'components/organisms/Form/Form'
 import NotesViewer from 'components/organisms/NotesViewer/NotesViewer'
 import { NotesContext } from 'providers/NotesProviders'
 import NewsFeed from 'components/organisms/NewsFeed/NewsFeed'
+import NotFound from 'components/organisms/NotFound/NotFound'
 
 const SwitchWrapper = () => {
   const { notes, handleAddNotes, formValues, handleInputChange, initialFormState } = useContext(NotesContext)
@@ -24,6 +25,7 @@ const SwitchWrapper = () => {
         <Route path="/news">
           <NewsFeed />
         </Route>
+        <Route component={NotFound} />
       </Switch>
     </Wrapper>
   )

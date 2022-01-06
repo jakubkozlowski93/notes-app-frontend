@@ -62,6 +62,9 @@ export const lightTheme = {
   errorMessage: {
     background: '#f8f4f4',
   },
+  notFound: {
+    color: '#737C8E',
+  },
 }
 
 export const darkTheme = {
@@ -127,5 +130,8 @@ export const darkTheme = {
   },
   errorMessage: {
     background: '#363537',
+  },
+  notFound: {
+    color: '#737C8E',
   },
 }
